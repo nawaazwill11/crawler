@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Salary estimates</title>
+    <style>
+        main {
+            width: 100%;
+            height: 100%;    
+        }
+        #frame {
+    
+            width: 1000px;
+            height: 700px;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="address-bar">
+            <div class="address-holder">
+                <input type="text" id="address" class="address">
+                <button id="load">Load page</button>
+            </div>
+        </div>
+        <div class="frame-container">
+            <iframe id="frame" src="" frameborder="0"></iframe>
+        </div>
+    </main>
+    <script type="text/javascript">
+        let address = document.getElementById('address');
+        let load = document.getElementById('load');
+        let frame = document.getElementById('frame');
+        
+        load.addEventListener('click', function (e) {
+            frame.style.display = 'block';
+            frame.src = address.value;
+        });
+        
+    </script>
+</body>
+</html>
